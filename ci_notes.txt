@@ -1,3 +1,5 @@
-If the test job fails, the build-docker job will NOT run because it depends on the test job using "needs: test".
+what would happen to the build-docker job if the test job fails? Why is this important?
+
+Ans: If the test job fails, the build-docker job will NOT run because it depends on the test job using "needs: test".
 This is important because it prevents broken or buggy code from being built into a Docker image or deployed.
 It ensures only tested and working code moves forward in the pipeline, enhancing reliability.
