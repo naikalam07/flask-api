@@ -57,4 +57,5 @@ jobs:
     needs: build-docker
     steps:
       - name: Print summary
-        run: echo "Pipeline complete for commit: ${{ github.sha }}"
+        run: echo "Pipeline complete for commit:${{github.sha}}"
+        
