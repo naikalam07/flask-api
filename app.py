@@ -9,7 +9,7 @@ next_id = 1
 
 @app.route('/api/health', methods=['GET'])
 def health():
-    return jsonify({'status': 'ok','message':'Flask is running'}), 500
+    return jsonify({'status': 'ok','message':'Flask is running'}), 200
 
 @app.route('/api/students', methods=['GET'])
 def get_students():
