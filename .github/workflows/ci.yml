@@ -50,3 +50,11 @@ jobs:
           curl --fail http://localhost:5000/api/health
           docker stop test-container
           docker rm test-container
+          
+  report:
+    name: Report Status
+    runs-on: ubuntu-latest
+    needs: build-docker
+    steps:
+      - name: Print summary
+        run: echo "Pipeline complete for commit: ${{ github.sha }}"
